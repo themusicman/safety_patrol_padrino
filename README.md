@@ -35,7 +35,7 @@ Or install it yourself as:
 	end
 
 
-	#inside of a route definition call the authorize method
+	#inside of a route definition call the can? or can! methods
 
 	post :create, map: '/users' do
 
