@@ -1,6 +1,6 @@
 module SafetyPatrol
 
-	module Pardino
+	module Padrino
 
 		class SafteyViolation < StandardError
 			
@@ -13,7 +13,7 @@ module SafetyPatrol
 			end
 
 			def message
-				"#{@user} is not authorized to #{@action} this resource: #{@resource}"
+				"#{@user.class} is not authorized to #{@action} this resource: #{@resource.class}"
 			end
 
 		end

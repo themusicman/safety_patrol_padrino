@@ -11,9 +11,9 @@ module SafetyPatrol
       end
       
       def can!(action, resource)
-        raise "authorize! cannot be passed a block" if block_given?
-        can_perform_action = authorize(action, resource)
-        halt 403, SafetyPatrol::Padrino::SafteyViolation.new(safety_patrol_user, action.to_s, resource).message unless can_perform_action
+        raise "can! cannot be passed a block" if block_given?
+        can_perform_action = can?(action, resource)
+        raise SafetyPatrol::Padrino::SafteyViolation.new(safety_patrol_user, action.to_s, resource) unless can_perform_action
       end      
         
       def safety_patrol_user
