@@ -1,7 +1,7 @@
 module SafetyPatrol
   
   module Padrino    
-    
+  
     module Helpers
       
       def can?(action, resource, &block)
@@ -21,14 +21,7 @@ module SafetyPatrol
       end
       
     end
-    
-    class << self
-      def registered(app)
-        app.helpers SafetyPatrol::Padrino::Helpers
-      end
-      alias :included :registered
-    end
-  
+
   end
 
 end
