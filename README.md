@@ -48,13 +48,10 @@ Or install it yourself as:
 			halt 403 unless can_perform_action
 		end
 
-		or use the can! method 
+		or use the can! method, it will raise a SafetyPatrol::Padrino::SafetyViolation error
 		can!(:create, user)
 
-
 	end
-
-
 
 
 ## Contributing
